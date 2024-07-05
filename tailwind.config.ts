@@ -24,6 +24,22 @@ const config: Config = {
         'md': '768px',
         'sm': '640px',
       }
+    },
+    extend: {
+      keyframes: {
+        'wave': {
+          'to': { 'background-position': '200% 0%' },
+        },
+        'launch': {
+          '0%': { 'transform': 'rotate(-45deg)' },
+          '30%': { 'transform': 'translateY(-0.875rem) rotate(-45deg)' },
+          '100%': { 'transform': 'translateY(-0.875rem) rotate(5deg)' },
+        }
+      },
+      animation: {
+        'gradient': 'wave 20s linear infinite',
+        'launch': 'launch 10s ease-out forwards',
+      }
     }
   },
   plugins: [],

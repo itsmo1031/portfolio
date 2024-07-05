@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Pretendard } from './fonts';
 import './globals.css';
+import cn from '@/utils/cn';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -14,7 +15,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={Pretendard.className}>{children}</body>
+      <body
+        className={cn(
+          Pretendard.className,
+          'selection:bg-[#0E5BE7] selection:text-[#FFFFFF]',
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
