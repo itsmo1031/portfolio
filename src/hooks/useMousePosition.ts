@@ -1,5 +1,4 @@
 import { useMousePositionStore } from '@/stores/useMousePositionStore';
-import { MousePosition } from '@/types';
 import { useRef, useEffect } from 'react';
 
 const useMousePosition = () => {

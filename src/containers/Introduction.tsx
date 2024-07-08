@@ -3,8 +3,6 @@
 import CommonSection from './CommonSection';
 import { RoughNotation } from 'react-rough-notation';
 import Image from 'next/image';
-import { useCallback, useState } from 'react';
-import HoverPreview from '@/components/HoverPreview';
 import PreviewLink from '@/components/PreviewLink';
 
 const Introduction = () => {

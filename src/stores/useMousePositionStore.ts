@@ -1,5 +1,9 @@
-import { MousePosition } from '@/types';
 import { create } from 'zustand';
+
+type MousePosition = {
+  x: number;
+  y: number;
+};
 
 type State = {
   position: MousePosition;

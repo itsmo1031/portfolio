@@ -8,7 +8,7 @@ type CommonSectionProps = {
 const CommonSection = (props: CommonSectionProps) => {
   return (
     <section
-      className={cn('mx-auto max-w-[920px] lg:max-w-[700px]', props.className)}
+      className={cn('mb-20 max-w-[920px] lg:max-w-[700px]', props.className)}
     >
       {props.children}
     </section>
