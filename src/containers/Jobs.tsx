@@ -7,7 +7,7 @@ const Jobs = () => {
   return (
     <CommonSection className="flex flex-col gap-[3.75rem]">
       <Title>Work Experience</Title>
-      <Job payload={jobs}></Job>
+      <Job payload={jobs} />
     </CommonSection>
   );
 };
