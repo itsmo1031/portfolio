@@ -1,17 +1,17 @@
 import { Skill } from '@/interfaces/Job';
 import { useState } from 'react';
-import SkillButton from './SkillButton';
+import SkillButton from './TechStackButton';
 import { AnimatePresence, motion } from 'framer-motion';
 
-const Skills = ({ data }: { data?: Skill[] }) => {
-  const [selectedSkillIndex, setSelectedSkillIndex] = useState<number>(-1);
+const TechStack = ({ data }: { data?: Skill[] }) => {
+  const [selectedStackIndex, setSelectedStackIndex] = useState<number>(-1);
 
   const handleClick = (index: number) => {
-    if (selectedSkillIndex === index) {
-      setSelectedSkillIndex(-1);
+    if (selectedStackIndex === index) {
+      setSelectedStackIndex(-1);
       return;
     }
-    setSelectedSkillIndex(index);
+    setSelectedStackIndex(index);
   };
 
   return (
@@ -22,7 +22,7 @@ const Skills = ({ data }: { data?: Skill[] }) => {
             {/* 스킬 키워드를 클릭할 수 있는 버튼으로 변경 */}
             <SkillButton
               onClick={() => handleClick(index)}
-              isSelected={selectedSkillIndex === index}
+              isSelected={selectedStackIndex === index}
             >
               {skill.keyword}
             </SkillButton>
@@ -30,14 +30,14 @@ const Skills = ({ data }: { data?: Skill[] }) => {
         ))}
       </ul>
       <AnimatePresence>
-        {selectedSkillIndex !== -1 && data && (
+        {selectedStackIndex !== -1 && data && (
           <motion.p
             className="mt-2"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
           >
-            {data[selectedSkillIndex].description}
+            {data[selectedStackIndex].description}
           </motion.p>
         )}
       </AnimatePresence>
@@ -45,4 +45,4 @@ const Skills = ({ data }: { data?: Skill[] }) => {
   );
 };
 
-export default Skills;
+export default TechStack;

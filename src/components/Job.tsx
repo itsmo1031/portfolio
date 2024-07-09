@@ -2,8 +2,7 @@
 
 import { Payload, Skill, Work } from '@/interfaces/Job';
 import { getDateRangeToString } from '@/utils/date';
-import { useState } from 'react';
-import Skills from './Skills';
+import TechStack from './TechStack';
 
 type JobProps = {
   payload: Payload;
@@ -61,7 +60,7 @@ const Job = ({ payload }: JobProps) => {
                     <h4 className="mb-2 text-2xl font-bold tracking-tighter">
                       Tech Stack
                     </h4>
-                    <Skills data={work.skills} />
+                    <TechStack data={work.skills} />
                   </div>
                 </div>
               ))}

@@ -1,16 +1,17 @@
 import cn from '@/utils/cn';
 import { ComponentPropsWithoutRef, MouseEventHandler } from 'react';
 
-type SkillButtonProps = {
+type TechStackButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>;
   isSelected: boolean;
 } & ComponentPropsWithoutRef<'button'>;
-const SkillButton = ({
+
+const TechStackButton = ({
   children,
   onClick,
   isSelected,
   className,
-}: SkillButtonProps) => {
+}: TechStackButtonProps) => {
   return (
     <button
       className={cn(
@@ -27,4 +28,4 @@ const SkillButton = ({
   );
 };
 
-export default SkillButton;
+export default TechStackButton;
