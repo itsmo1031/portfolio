@@ -1,14 +1,22 @@
 import Skill from '@/components/Skill';
-import skills from '@/contents/skills';
 import CommonSection from './CommonSection';
 import Title from '@/components/Title';
+import { Payload } from '@/interfaces/Skill';
 
-const Skills = () => {
+type SkillsProps = {
+  payload: Payload;
+};
+
+const Skills = ({ payload }: SkillsProps) => {
   return (
-    <CommonSection className="flex flex-col">
-      <Title className="mb-5">Skills</Title>
-      <Skill payload={skills} />
-    </CommonSection>
+    !payload.disabled && (
+      <CommonSection className="flex flex-col">
+        <Title className="mb-5">Skills</Title>
+        {payload.list.map((item) => (
+          <Skill item={item} key={item.name} />
+        ))}
+      </CommonSection>
+    )
   );
 };
 
