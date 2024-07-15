@@ -1,7 +1,7 @@
-import { Skill } from '@/interfaces/Job';
 import { useState } from 'react';
 import SkillButton from './TechStackButton';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Skill } from '@/interfaces/Common';
 
 const TechStack = ({ data }: { data?: Skill[] }) => {
   const [selectedStackIndex, setSelectedStackIndex] = useState<number>(-1);
@@ -29,18 +29,19 @@ const TechStack = ({ data }: { data?: Skill[] }) => {
           </li>
         ))}
       </ul>
-      <AnimatePresence>
-        {selectedStackIndex !== -1 && data && (
-          <motion.p
-            className="mt-2"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-          >
-            {data[selectedStackIndex].description}
-          </motion.p>
-        )}
-      </AnimatePresence>
+      <div className="mt-2 min-h-12">
+        <AnimatePresence>
+          {selectedStackIndex !== -1 && data && (
+            <motion.p
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+            >
+              {data[selectedStackIndex].description}
+            </motion.p>
+          )}
+        </AnimatePresence>
+      </div>
     </>
   );
 };

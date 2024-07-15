@@ -1,0 +1,8 @@
+.swiper-button-prev,
+.swiper-button-next {
+  @apply text-primary;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary;
+}

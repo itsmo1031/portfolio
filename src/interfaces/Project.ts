@@ -5,19 +5,17 @@ export interface Payload extends Common.Payload {
 }
 
 export interface Item {
-  company: string;
-  location: string;
-  position: string;
+  name: string;
   startedAt: string;
   endedAt?: string;
-  works: Work[];
-}
-
-export interface Work {
-  title: string;
+  position: string;
   description: string;
   keynotes: string[];
-  startedAt: string;
-  endedAt?: string;
   skills?: Common.Skill[];
+  images?: ProjectImage[];
+}
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
 }
