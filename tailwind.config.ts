@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from 'tailwindcss/colors';
 
 const config: Config = {
   content: [
@@ -39,6 +40,10 @@ const config: Config = {
       animation: {
         'gradient': 'wave 20s linear infinite',
         'launch': 'launch 10s ease-out forwards',
+      },
+      colors: {
+        primary: '#0E5BE7',
+        secondary: colors.pink,
       }
     }
   },

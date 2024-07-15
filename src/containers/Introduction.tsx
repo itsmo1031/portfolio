@@ -25,6 +25,7 @@ const Introduction = () => {
               alt="rocket"
               width={38}
               height={38}
+              unoptimized
             />
             을 위해 항상 고민합니다.
           </h2>
@@ -49,11 +50,12 @@ const Introduction = () => {
               사용자 경험
             </RoughNotation>
             <Image
-              className="inline-block -translate-x-1 -translate-y-4"
+              className="inline-block -translate-y-4"
               src="/star.png"
               alt="star"
               width={30}
               height={30}
+              unoptimized
             />
             을 중요하게 생각합니다.
           </h2>

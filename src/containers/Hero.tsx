@@ -12,10 +12,11 @@ const Hero = () => {
           height={100}
           alt="waving-hand"
           className="inline -translate-y-4"
+          unoptimized
         />
         <br />
         저는{' '}
-        <span className="animate-gradient bg-gradient-to-r from-[#0E5BE7] via-pink-500 to-[#0E5BE7] bg-[length:400%_100%] bg-clip-text text-transparent">
+        <span className="from-primary via-secondary-500 to-primary animate-gradient bg-gradient-to-r bg-[length:400%_100%] bg-clip-text text-transparent">
           정필모
         </span>
         입니다.

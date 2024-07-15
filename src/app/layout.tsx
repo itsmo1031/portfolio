@@ -18,7 +18,7 @@ export default function RootLayout({
       <body
         className={cn(
           Pretendard.className,
-          'selection:bg-[#0E5BE7] selection:text-[#FFFFFF]',
+          'selection:bg-primary selection:text-white',
         )}
       >
         {children}
