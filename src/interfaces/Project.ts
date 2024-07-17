@@ -14,6 +14,12 @@ export interface Item {
   links?: Links;
   skills?: Common.Skill[];
   images?: ProjectImage[];
+  articles?: Article[];
+}
+
+export interface Article {
+  title: string;
+  href: string;
 }
 
 export interface Links {

@@ -3,9 +3,10 @@ import HoverPreview from './HoverPreview';
 type PreviewLinkProps = {
   href: string;
   children: React.ReactNode;
+  imgSrc: string;
 };
 
-const PreviewLink = ({ href, children }: PreviewLinkProps) => {
+const PreviewLink = ({ href, children, imgSrc }: PreviewLinkProps) => {
   return (
     <>
       <a
@@ -15,7 +16,7 @@ const PreviewLink = ({ href, children }: PreviewLinkProps) => {
       >
         {children}
       </a>
-      <HoverPreview src="/blog.png" className="hidden peer-hover:block" />
+      <HoverPreview src={imgSrc} className="hidden peer-hover:block" />
     </>
   );
 };

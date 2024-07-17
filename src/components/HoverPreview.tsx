@@ -25,7 +25,7 @@ const HoverPreview = ({ src, className }: HoverPreviewProps) => {
         top: `${mousePosition.y + 30}px`,
       }}
     >
-      <Image src={src} width={120} height={63} alt="HoverPreview" />
+      <Image src={src} width={120} height={63} alt="preview image" />
     </div>
   );
 };

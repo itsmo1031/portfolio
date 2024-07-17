@@ -35,8 +35,10 @@ const Introduction = () => {
             빠르게 학습하고, 새롭게 알게 된 지식을 활용하는 것을 좋아합니다.
             <br />
             주변 지인과{' '}
-            <PreviewLink href="https://itsmo.dev/">블로그</PreviewLink>에 지식을
-            나누며 함께 성장하는 것을 좋아합니다.
+            <PreviewLink href="https://itsmo.dev/" imgSrc="/blog.png">
+              블로그
+            </PreviewLink>
+            에 지식을 나누며 함께 성장하는 것을 좋아합니다.
           </div>
         </section>
         <section className="flex flex-col gap-5">

@@ -3,6 +3,14 @@
   @apply text-primary/25 transition-colors duration-200 hover:text-primary;
 }
 
+.swiper-button-next {
+  @apply right-5;
+}
+
+.swiper-button-prev {
+  @apply left-5;
+}
+
 .swiper-pagination-bullet-active {
   @apply bg-primary;
 }

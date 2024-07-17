@@ -9,11 +9,24 @@ type ProjectProps = {
 
 const Project = ({ item }: ProjectProps) => {
   return (
-    <section className="flex flex-col gap-5 border-b border-[#EEEEEE] py-10 md:grid-cols-1">
-      <div className="flex flex-col gap-5">
-        <div className="flex flex-col gap-2">
+    <section className="flex flex-col gap-10 border-b border-[#EEEEEE] py-14">
+      <div className="flex flex-col gap-3">
+        <div className="col-span-2 flex flex-col gap-2">
           <div className="flex items-center gap-2 text-[2rem] font-bold leading-8">
-            <h3 className="tracking-tighter">{item.name}</h3>
+            <h3 className="tracking-tighter">
+              {item.links?.site ? (
+                <a
+                  href={item.links.site}
+                  target="_blank"
+                  className="text-primary underline underline-offset-4 transition-colors duration-500 hover:text-secondary-500"
+                  rel="noreferrer"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                item.name
+              )}
+            </h3>
             {item.links?.git && (
               <div>
                 <a
@@ -32,7 +45,9 @@ const Project = ({ item }: ProjectProps) => {
               </div>
             )}
           </div>
-          <div className="flex flex-col">
+        </div>
+        <div className="grid grid-cols-5 gap-2.5">
+          <div className="col-span-2 flex flex-col">
             <span className="leading-tight tracking-tight">
               {getDateRangeToString(item.startedAt, item.endedAt)}
             </span>
@@ -40,11 +55,13 @@ const Project = ({ item }: ProjectProps) => {
               {item.position}
             </span>
           </div>
-          <p className="leading-normal tracking-tight">{item.description}</p>
+          <p className="col-span-3 leading-normal tracking-tight">
+            {item.description}
+          </p>
         </div>
       </div>
       {item.images && <Carousel images={item.images} />}
-      <div className="grid grid-cols-2">
+      <div className="grid grid-cols-2 gap-2.5">
         <div>
           <h4 className="mb-2 text-2xl font-bold tracking-tighter">
             What did I do?
@@ -55,11 +72,34 @@ const Project = ({ item }: ProjectProps) => {
             ))}
           </ul>
         </div>
-        <div>
-          <h4 className="mb-2 text-2xl font-bold tracking-tighter">
-            Tech Stack
-          </h4>
-          <TechStack data={item.skills} />
+        <div className="flex flex-col gap-6">
+          {item.articles && (
+            <div>
+              <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+                Article
+              </h4>
+              <ul className="list-inside list-disc leading-relaxed tracking-tight">
+                {item.articles.map((article, index) => (
+                  <li key={index}>
+                    <a
+                      href={article.href}
+                      target="_blank"
+                      className="text-primary underline-offset-4 transition-colors duration-500 hover:text-secondary-500 hover:underline"
+                      rel="noreferrer"
+                    >
+                      {article.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div>
+            <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+              Tech Stack
+            </h4>
+            <TechStack data={item.skills} />
+          </div>
         </div>
       </div>
     </section>
