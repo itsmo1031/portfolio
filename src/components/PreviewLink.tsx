@@ -10,7 +10,7 @@ const PreviewLink = ({ href, children }: PreviewLinkProps) => {
     <>
       <a
         target="_blank"
-        className="peer relative text-[#929292] underline underline-offset-4 hover:text-[#6e6e6e]"
+        className="peer relative text-primary underline underline-offset-4 transition-colors duration-500 hover:text-secondary-500"
         href={href}
       >
         {children}
