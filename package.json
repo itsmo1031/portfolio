@@ -24,6 +24,9 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify-json/mdi": "^1.1.67",
+    "@iconify/json": "^2.2.228",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

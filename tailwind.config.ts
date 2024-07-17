@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import colors from 'tailwindcss/colors';
+import { iconsPlugin, getIconCollections } from "@egoist/tailwindcss-icons";
 
 const config: Config = {
   content: [
@@ -47,6 +48,10 @@ const config: Config = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    iconsPlugin({
+      collections: getIconCollections(["mdi"])
+    })
+  ],
 };
 export default config;
