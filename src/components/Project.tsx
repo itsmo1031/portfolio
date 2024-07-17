@@ -7,7 +7,6 @@ type ProjectProps = {
 const Project = ({ item }: ProjectProps) => {
   return (
     <section
-      key={item.name}
       className="flex flex-col gap-8 border-b border-[#EEEEEE] py-10"
     >
       <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
