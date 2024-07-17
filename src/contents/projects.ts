@@ -2,6 +2,9 @@ import { Item, Payload } from "@/interfaces/Project";
 
 const oomool: Item = {
   name: "우물 - 우리들의 물음표",
+  links: {
+    git: "https://github.com/oomool-app",
+  },
   startedAt: "2023. 12.",
   endedAt: "2024. 02.",
   position: "팀장",

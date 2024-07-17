@@ -11,8 +11,14 @@ export interface Item {
   position: string;
   description: string;
   keynotes: string[];
+  links?: Links;
   skills?: Common.Skill[];
   images?: ProjectImage[];
+}
+
+export interface Links {
+  site?: string;
+  git?: string;
 }
 
 export interface ProjectImage {
