@@ -1,6 +1,6 @@
 .swiper-button-prev,
 .swiper-button-next {
-  @apply text-primary;
+  @apply text-primary/25 transition-colors duration-200 hover:text-primary;
 }
 
 .swiper-pagination-bullet-active {

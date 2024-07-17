@@ -41,6 +41,7 @@ const Carousel = ({ images }: CarouselProps) => {
 
   return (
     <Swiper
+      className="w-full"
       modules={[Navigation, Pagination, A11y, Keyboard, Mousewheel]}
       spaceBetween={50}
       slidesPerView={1}
