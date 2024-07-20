@@ -61,7 +61,7 @@ const Project = ({ item }: ProjectProps) => {
         </div>
       </div>
       {item.images && <Carousel images={item.images} />}
-      <div className="grid grid-cols-2 gap-2.5">
+      <div className="grid grid-cols-2 gap-5">
         <div>
           <h4 className="mb-2 text-2xl font-bold tracking-tighter">
             What did I do?
