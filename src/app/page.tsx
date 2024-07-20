@@ -1,4 +1,5 @@
 import Activities from '@/containers/Activities';
+import Certificates from '@/containers/Certificates';
 import Education from '@/containers/Education';
 import Header from '@/containers/Header';
 import Hero from '@/containers/Hero';
@@ -8,6 +9,7 @@ import Languages from '@/containers/Languages';
 import Projects from '@/containers/Projects';
 import Skills from '@/containers/Skills';
 import activities from '@/contents/activities';
+import certificates from '@/contents/certificates';
 import education from '@/contents/education';
 import jobs from '@/contents/jobs';
 import languages from '@/contents/languages';
@@ -27,6 +29,7 @@ export default function Home() {
         <Education payload={education} />
         <Activities payload={activities} />
         <Languages payload={languages} />
+        <Certificates payload={certificates} />
       </main>
     </>
   );
