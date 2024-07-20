@@ -4,11 +4,13 @@ import Header from '@/containers/Header';
 import Hero from '@/containers/Hero';
 import Introduction from '@/containers/Introduction';
 import Jobs from '@/containers/Jobs';
+import Languages from '@/containers/Languages';
 import Projects from '@/containers/Projects';
 import Skills from '@/containers/Skills';
 import activities from '@/contents/activities';
 import education from '@/contents/education';
 import jobs from '@/contents/jobs';
+import languages from '@/contents/languages';
 import projects from '@/contents/projects';
 import skills from '@/contents/skills';
 
@@ -24,6 +26,7 @@ export default function Home() {
         <Projects payload={projects} />
         <Education payload={education} />
         <Activities payload={activities} />
+        <Languages payload={languages} />
       </main>
     </>
   );
