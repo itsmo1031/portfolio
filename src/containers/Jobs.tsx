@@ -10,7 +10,7 @@ type JobsProps = {
 const Jobs = ({ payload }: JobsProps) => {
   return (
     !payload.disabled && (
-      <CommonSection className="flex flex-col gap-[3.75rem]">
+      <CommonSection>
         <Title>Work Experience</Title>
         {payload.list.map((item) => (
           <Job item={item} key={`${item.company}-${item.startedAt}`} />

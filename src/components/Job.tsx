@@ -10,7 +10,7 @@ type JobProps = {
 
 const Job = ({ item }: JobProps) => {
   return (
-    <section className="grid grid-cols-3 gap-2.5">
+    <section className="grid grid-cols-3 gap-2.5 border-b border-[#EEEEEE] py-14">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col">
           <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
