@@ -1,23 +1,23 @@
-import Education from '@/components/Education';
+import Edu from '@/components/Education';
 import CommonSection from './CommonSection';
 import Title from '@/components/Title';
 import { Payload } from '@/interfaces/Education';
 
-type EducationsProps = {
+type EducationProps = {
   payload: Payload;
 };
 
-const Educations = ({ payload }: EducationsProps) => {
+const Education = ({ payload }: EducationProps) => {
   return (
     !payload.disabled && (
       <CommonSection className="flex flex-col">
         <Title className="mb-5">Education</Title>
         {payload.list.map((item) => (
-          <Education item={item} key={item.name} />
+          <Edu item={item} key={item.name} />
         ))}
       </CommonSection>
     )
   );
 };
 
-export default Educations;
+export default Education;

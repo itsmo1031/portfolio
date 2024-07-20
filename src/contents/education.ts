@@ -1,6 +1,6 @@
 import { Payload } from "@/interfaces/Education";
 
-const educations: Payload = {
+const education: Payload = {
   list: [
     {
       name: "삼성 청년 SW 아카데미 10기",
@@ -19,4 +19,4 @@ const educations: Payload = {
   ]
 }
 
-export default educations;
+export default education;
