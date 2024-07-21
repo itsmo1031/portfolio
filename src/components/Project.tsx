@@ -2,6 +2,7 @@ import { Item } from '@/interfaces/Project';
 import { getDateRangeToString } from '@/utils/date';
 import Carousel from './Carousel';
 import TechStack from './TechStack';
+import Icon from './Icon';
 
 type ProjectProps = {
   item: Item;
@@ -33,14 +34,10 @@ const Project = ({ item }: ProjectProps) => {
                   href={item.links.git}
                   target="_blank"
                   className="flex items-center text-3xl transition-colors duration-500 hover:text-primary"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label="git repository link"
                 >
-                  <span
-                    className="i-mdi-github"
-                    role="img"
-                    aria-hidden="true"
-                  />
+                  <Icon name="GitHub" />
                 </a>
               </div>
             )}
@@ -85,7 +82,7 @@ const Project = ({ item }: ProjectProps) => {
                       href={article.href}
                       target="_blank"
                       className="text-primary underline-offset-4 transition-colors duration-500 hover:text-secondary-500 hover:underline"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                     >
                       {article.title}
                     </a>

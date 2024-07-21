@@ -12,6 +12,8 @@ const Contact = ({ item }: ContactProps) => {
         href={item.href}
         className="flex items-center justify-center text-gray-500/70 transition-all duration-500 hover:-translate-y-1 hover:text-primary"
         aria-label={item.name}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <Icon name={item.name} />
       </a>
