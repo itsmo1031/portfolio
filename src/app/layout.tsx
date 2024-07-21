@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     locale: meta.locale,
     type: 'website',
   },
+  metadataBase:
+    process.env.NODE_ENV === 'production'
+      ? new URL(meta.url)
+      : new URL('http://localhost:3000/'),
 };
 
 export default function RootLayout({

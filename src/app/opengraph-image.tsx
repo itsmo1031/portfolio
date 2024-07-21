@@ -1,11 +1,13 @@
 import { ImageResponse } from 'next/og';
 import meta from '@/config/metadata';
+import path from 'node:path';
+import fs from 'node:fs/promises';
 
 // Route segment config
-export const runtime = 'edge';
+export const runtime = 'nodejs';
 
 // Image metadata
-export const alt = `${meta.name} 이력서`;
+export const alt = `${meta.name} 포트폴리오`;
 export const size = {
   width: 1200,
   height: 630,
@@ -16,9 +18,13 @@ export const contentType = 'image/png';
 // Image generation
 export default async function Image() {
   // Font
-  const pretendard = fetch(
-    new URL('/public/fonts/Pretendard-Bold.woff', import.meta.url),
-  ).then((res) => res.arrayBuffer());
+  const fontPath = path.join(
+    process.cwd(),
+    'public',
+    'fonts',
+    'Pretendard-Bold.woff',
+  );
+  const pretendard = await fs.readFile(fontPath);
 
   return new ImageResponse(
     (
@@ -83,7 +89,7 @@ export default async function Image() {
       fonts: [
         {
           name: 'Pretendard',
-          data: await pretendard,
+          data: pretendard,
           style: 'normal',
           weight: 700,
         },
