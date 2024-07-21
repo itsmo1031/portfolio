@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@egoist/tailwindcss-icons": "^1.8.1",
+    "@iconify-json/flowbite": "^1.1.5",
     "@iconify-json/mdi": "^1.1.67",
     "@iconify/json": "^2.2.228",
     "@types/node": "^20",
