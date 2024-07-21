@@ -6,13 +6,15 @@ type SkillProps = {
 
 const Skill = ({ item }: SkillProps) => {
   return (
-    <article className="flex flex-col gap-8 border-b border-[#EEEEEE] py-10">
-      <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
+    <article className="flex flex-col gap-8 border-b border-[#EEEEEE] py-10 sm:gap-4">
+      <h3 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl">
         {item.name}
       </h3>
-      <ul className="list-inside list-disc leading-relaxed tracking-tight">
+      <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
         {item.keynotes.map((keynote, index) => (
-          <li key={index}>{keynote}</li>
+          <li key={index} className="sm:mb-1">
+            {keynote}
+          </li>
         ))}
       </ul>
     </article>

@@ -8,7 +8,7 @@ import PreviewLink from '@/components/PreviewLink';
 const Introduction = () => {
   return (
     <>
-      <CommonSection className="flex flex-col gap-10 text-[32px]">
+      <CommonSection className="flex flex-col gap-10 text-[32px] sm:text-xl">
         <section className="flex flex-col gap-5">
           <h2 className="font-bold leading-[100%] tracking-tight">
             <RoughNotation
@@ -20,7 +20,7 @@ const Introduction = () => {
               효율적인 성장
             </RoughNotation>
             <Image
-              className="inline-block -rotate-45 animate-launch"
+              className="inline-block -rotate-45 animate-launch sm:size-5"
               src="/rocket.png"
               alt="rocket"
               width={38}
@@ -29,7 +29,7 @@ const Introduction = () => {
             />
             을 위해 항상 고민합니다.
           </h2>
-          <div className="font-regular leading-tight tracking-tight">
+          <div className="font-regular leading-tight tracking-tight sm:text-base">
             성장을 최우선 가치로 두고, 매주 회고하며 성장 기회를 찾습니다.
             <br />
             빠르게 학습하고, 새롭게 알게 된 지식을 활용하는 것을 좋아합니다.
@@ -61,7 +61,7 @@ const Introduction = () => {
             />
             을 중요하게 생각합니다.
           </h2>
-          <div className="font-regular leading-tight tracking-tight">
+          <div className="font-regular leading-tight tracking-tight sm:text-base">
             소프트웨어의 가치는 가치 있는 사용자 경험에서 나온다고 믿습니다.
             <br />
             아름다운 UI/UX를 항상 탐색하고, 이를 구현하는 일을 좋아합니다.

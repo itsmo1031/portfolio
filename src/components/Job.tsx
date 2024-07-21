@@ -10,7 +10,7 @@ type JobProps = {
 
 const Job = ({ item }: JobProps) => {
   return (
-    <section className="grid grid-cols-3 gap-2.5 border-b border-[#EEEEEE] py-14">
+    <section className="grid grid-cols-3 gap-2.5 border-b border-[#EEEEEE] py-14 sm:grid-cols-1 sm:gap-10">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col">
           <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
@@ -29,7 +29,7 @@ const Job = ({ item }: JobProps) => {
         {item.works.map((work: Work) => (
           <div key={work.title} className="flex flex-col gap-5">
             <div>
-              <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
+              <h3 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl sm:leading-6">
                 {work.title}
               </h3>
               <span className="leading-tight tracking-tight">
@@ -43,9 +43,11 @@ const Job = ({ item }: JobProps) => {
               <h4 className="mb-2 text-2xl font-bold tracking-tighter">
                 What did I do?
               </h4>
-              <ul className="list-inside list-disc leading-relaxed tracking-tight">
+              <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
                 {work.keynotes.map((keynote, index) => (
-                  <li key={index}>{keynote}</li>
+                  <li key={index} className="sm:mb-1">
+                    {keynote}
+                  </li>
                 ))}
               </ul>
             </div>

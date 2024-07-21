@@ -11,8 +11,8 @@ type ProjectProps = {
 const Project = ({ item }: ProjectProps) => {
   return (
     <section className="flex flex-col gap-10 border-b border-[#EEEEEE] py-14">
-      <div className="flex flex-col gap-3">
-        <div className="col-span-2 flex flex-col gap-2">
+      <div className="flex flex-col gap-3 sm:gap-1">
+        <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 text-[2rem] font-bold leading-8">
             <h3 className="tracking-tighter">
               {item.links?.site ? (
@@ -43,7 +43,7 @@ const Project = ({ item }: ProjectProps) => {
             )}
           </div>
         </div>
-        <div className="grid grid-cols-5 gap-2.5">
+        <div className="grid grid-cols-5 gap-2.5 sm:grid-cols-1">
           <div className="col-span-2 flex flex-col">
             <span className="leading-tight tracking-tight">
               {getDateRangeToString(item.startedAt, item.endedAt)}
@@ -58,14 +58,16 @@ const Project = ({ item }: ProjectProps) => {
         </div>
       </div>
       {item.images && <Carousel images={item.images} />}
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-1">
         <div>
           <h4 className="mb-2 text-2xl font-bold tracking-tighter">
             What did I do?
           </h4>
-          <ul className="list-inside list-disc leading-relaxed tracking-tight">
+          <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
             {item.keynotes.map((keynote, index) => (
-              <li key={index}>{keynote}</li>
+              <li key={index} className="sm:mb-1">
+                {keynote}
+              </li>
             ))}
           </ul>
         </div>
@@ -75,9 +77,9 @@ const Project = ({ item }: ProjectProps) => {
               <h4 className="mb-2 text-2xl font-bold tracking-tighter">
                 Article
               </h4>
-              <ul className="list-inside list-disc leading-relaxed tracking-tight">
+              <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
                 {item.articles.map((article, index) => (
-                  <li key={index}>
+                  <li key={index} className="sm:mb-1">
                     <a
                       href={article.href}
                       target="_blank"
