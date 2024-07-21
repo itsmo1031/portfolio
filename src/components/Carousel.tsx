@@ -50,8 +50,6 @@ const Carousel = ({ images }: CarouselProps) => {
         enabled: !isMobile,
         clickable: true,
       }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
       a11y={{
         prevSlideMessage: '이전 이미지',
         nextSlideMessage: '다음 이미지',
