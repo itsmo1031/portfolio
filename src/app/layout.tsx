@@ -2,10 +2,17 @@ import type { Metadata } from 'next';
 import { Pretendard } from './fonts';
 import './globals.css';
 import cn from '@/utils/cn';
+import { GoogleTagManager } from '@next/third-parties/google';
+import meta from '@/config/metadata';
 
 export const metadata: Metadata = {
-  title: '정필모 포트폴리오',
-  description: '개발자 정필모 포트폴리오입니다.',
+  title: meta.title,
+  description: meta.description,
+  openGraph: {
+    url: meta.url,
+    locale: meta.locale,
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
@@ -23,6 +30,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GoogleTagManager gtmId={meta.gtag} />
     </html>
   );
 }
