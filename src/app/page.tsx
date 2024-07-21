@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="container mx-auto text-[#262626]">
+      <main className="mx-auto w-full max-w-[920px] text-[#262626] lg:max-w-[700px] md:max-w-full md:px-4">
         <Hero />
         <Introduction />
         <Jobs payload={jobs} />

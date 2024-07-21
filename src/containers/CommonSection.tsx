@@ -7,14 +7,7 @@ type CommonSectionProps = {
 
 const CommonSection = (props: CommonSectionProps) => {
   return (
-    <section
-      className={cn(
-        'mb-20 max-w-[920px] lg:max-w-[700px] lg:px-4',
-        props.className,
-      )}
-    >
-      {props.children}
-    </section>
+    <section className={cn('mb-20', props.className)}>{props.children}</section>
   );
 };
 

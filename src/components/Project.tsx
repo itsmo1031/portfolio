@@ -10,7 +10,7 @@ type ProjectProps = {
 
 const Project = ({ item }: ProjectProps) => {
   return (
-    <section className="flex flex-col gap-10 border-b border-[#EEEEEE] py-14">
+    <section className="flex flex-col gap-10 border-b border-[#EEEEEE] py-14 lg:gap-4">
       <div className="flex flex-col gap-3 sm:gap-1">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 text-[2rem] font-bold leading-8">

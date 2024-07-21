@@ -11,7 +11,7 @@ const Hero = () => {
           width={100}
           height={100}
           alt="waving-hand"
-          className="inline -translate-y-4 sm:size-12 sm:-translate-y-2"
+          className="inline -translate-y-4 lg:size-16 sm:size-12 sm:-translate-y-2"
           unoptimized
         />
         <br />

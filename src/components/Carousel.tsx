@@ -67,7 +67,7 @@ const Carousel = ({ images }: CarouselProps) => {
       {images &&
         images.map((image) => (
           <SwiperSlide key={image.alt}>
-            <figure className="relative h-[32rem] sm:h-96">
+            <figure className="relative h-[32rem] lg:h-[460px] sm:h-96">
               <Image
                 src={image.src}
                 alt={image.alt}
