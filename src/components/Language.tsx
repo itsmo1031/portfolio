@@ -16,6 +16,7 @@ const Language = ({ item }: LanguageProps) => {
           <span className="leading-tight tracking-tight">
             {getDateRangeToString(item.validFrom, item.validThru)}
           </span>
+          <span className="leading-tight tracking-tight">{item.grade}</span>
         </div>
       </section>
     </article>
