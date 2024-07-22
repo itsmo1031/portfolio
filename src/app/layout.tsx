@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
-import { Pretendard } from './fonts';
 import './globals.css';
-import cn from '@/utils/cn';
 import { GoogleTagManager } from '@next/third-parties/google';
 import meta from '@/config/metadata';
 
@@ -26,12 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body
-        className={cn(
-          Pretendard.className,
-          'selection:bg-primary selection:text-white',
-        )}
-      >
+      <body className="selection:bg-primary selection:text-white">
         {children}
       </body>
       <GoogleTagManager gtmId={meta.gtag} />
