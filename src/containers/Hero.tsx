@@ -13,6 +13,7 @@ const Hero = () => {
           alt="waving-hand"
           className="inline -translate-y-4 lg:size-16 sm:size-12 sm:-translate-y-2"
           unoptimized
+          fetchPriority="high"
         />
         <br />
         저는{' '}

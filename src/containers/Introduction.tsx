@@ -26,6 +26,7 @@ const Introduction = () => {
               width={38}
               height={38}
               unoptimized
+              fetchPriority="high"
             />
             을 위해 항상 고민합니다.
           </h2>
@@ -58,6 +59,7 @@ const Introduction = () => {
               width={30}
               height={30}
               unoptimized
+              fetchPriority="high"
             />
             을 중요하게 생각합니다.
           </h2>
