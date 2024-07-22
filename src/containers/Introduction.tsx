@@ -53,7 +53,7 @@ const Introduction = () => {
               사용자 경험
             </RoughNotation>
             <Image
-              className="inline-block -translate-y-4"
+              className="inline-block -translate-y-4 sm:size-5"
               src="/star.png"
               alt="star"
               width={30}
