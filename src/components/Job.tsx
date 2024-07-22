@@ -13,9 +13,9 @@ const Job = ({ item }: JobProps) => {
     <section className="grid grid-cols-3 gap-2.5 border-b border-[#EEEEEE] py-14 sm:grid-cols-1 sm:gap-10">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col">
-          <h3 className="text-[2rem] font-bold leading-8 tracking-tighter">
+          <h2 className="text-[2rem] font-bold leading-8 tracking-tighter">
             {item.company}
-          </h3>
+          </h2>
           <span className="leading-tight tracking-tight">{item.location}</span>
         </div>
         <div className="flex flex-col">
@@ -29,9 +29,9 @@ const Job = ({ item }: JobProps) => {
         {item.works.map((work: Work) => (
           <div key={work.title} className="flex flex-col gap-5">
             <div>
-              <h3 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl sm:leading-6">
+              <h2 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl sm:leading-6">
                 {work.title}
-              </h3>
+              </h2>
               <span className="leading-tight tracking-tight">
                 {getDateRangeToString(work.startedAt, work.endedAt)}
               </span>
@@ -40,9 +40,9 @@ const Job = ({ item }: JobProps) => {
               </p>
             </div>
             <div>
-              <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+              <h3 className="mb-2 text-2xl font-bold tracking-tighter">
                 What did I do?
-              </h4>
+              </h3>
               <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
                 {work.keynotes.map((keynote, index) => (
                   <li key={index} className="sm:mb-1">
@@ -52,9 +52,9 @@ const Job = ({ item }: JobProps) => {
               </ul>
             </div>
             <div>
-              <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+              <h3 className="mb-2 text-2xl font-bold tracking-tighter">
                 Tech Stack
-              </h4>
+              </h3>
               <TechStack data={work.skills} />
             </div>
           </div>

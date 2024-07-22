@@ -14,7 +14,7 @@ const Project = ({ item }: ProjectProps) => {
       <div className="flex flex-col gap-3 sm:gap-1">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2 text-[2rem] font-bold leading-8">
-            <h3 className="tracking-tighter">
+            <h2 className="tracking-tighter">
               {item.links?.site ? (
                 <a
                   href={item.links.site}
@@ -27,7 +27,7 @@ const Project = ({ item }: ProjectProps) => {
               ) : (
                 item.name
               )}
-            </h3>
+            </h2>
             {item.links?.git && (
               <div>
                 <a
@@ -60,9 +60,9 @@ const Project = ({ item }: ProjectProps) => {
       {item.images && <Carousel images={item.images} />}
       <div className="grid grid-cols-2 gap-5 sm:grid-cols-1">
         <div>
-          <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+          <h3 className="mb-2 text-2xl font-bold tracking-tighter">
             What did I do?
-          </h4>
+          </h3>
           <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
             {item.keynotes.map((keynote, index) => (
               <li key={index} className="sm:mb-1">
@@ -74,9 +74,9 @@ const Project = ({ item }: ProjectProps) => {
         <div className="flex flex-col gap-6">
           {item.articles && (
             <div>
-              <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+              <h3 className="mb-2 text-2xl font-bold tracking-tighter">
                 Article
-              </h4>
+              </h3>
               <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
                 {item.articles.map((article, index) => (
                   <li key={index} className="sm:mb-1">
@@ -94,9 +94,9 @@ const Project = ({ item }: ProjectProps) => {
             </div>
           )}
           <div>
-            <h4 className="mb-2 text-2xl font-bold tracking-tighter">
+            <h3 className="mb-2 text-2xl font-bold tracking-tighter">
               Tech Stack
-            </h4>
+            </h3>
             <TechStack data={item.skills} />
           </div>
         </div>
