@@ -6,7 +6,7 @@ const jobs: Payload = {
       company: "W&W Concept Inc.",
       location: "Vernon, CA, USA",
       position: "IT Intern",
-      startedAt: "2018. 01.",
+      startedAt: "2018. 10.",
       endedAt: "2019. 10.",
       works: [
         {
