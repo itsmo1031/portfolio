@@ -16,7 +16,7 @@ export interface Item {
 export interface Work {
   title: string;
   description: string;
-  keynotes: string[];
+  keynotes?: string[];
   startedAt: string;
   endedAt?: string;
   skills?: Common.Skill[];

@@ -39,24 +39,29 @@ const Job = ({ item }: JobProps) => {
                 {work.description}
               </p>
             </div>
-            <div>
-              <h3 className="mb-2 text-2xl font-bold tracking-tighter">
-                What did I do?
-              </h3>
-              <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
-                {work.keynotes.map((keynote, index) => (
-                  <li key={index} className="sm:mb-1">
-                    {keynote}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="mb-2 text-2xl font-bold tracking-tighter">
-                Tech Stack
-              </h3>
-              <TechStack data={work.skills} />
-            </div>
+            {work.keynotes && (
+              <div>
+                <h3 className="mb-2 text-2xl font-bold tracking-tighter">
+                  What did I do?
+                </h3>
+                <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">
+                  {work.keynotes.map((keynote, index) => (
+                    <li key={index} className="sm:mb-1">
+                      {keynote}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {work.skills && (
+              <div>
+                <h3 className="mb-2 text-2xl font-bold tracking-tighter">
+                  Tech Stack
+                </h3>
+                <TechStack data={work.skills} />
+              </div>
+            )}
           </div>
         ))}
       </div>
