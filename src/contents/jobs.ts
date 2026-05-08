@@ -5,13 +5,51 @@ const jobs: Payload = {
     {
       company: 'IBK시스템',
       location: '서울, 대한민국',
-      position: '계장',
+      position: '대리',
       startedAt: '2024. 11.',
       works: [
+        {
+          title: 'KDB캐피탈 차세대 프로젝트',
+          description:
+            'KDB캐피탈 업무시스템의 차세대 프로젝트에 참여하여 오토금융 사후관리 파트를 주로 맡아 개발하였습니다.',
+          keynotes: [
+            '오토금융 사후 불건전채권 입/지급 관리 화면 및 서비스 개발',
+            '오토금융 자동차 보험 사고관리 화면 및 서비스 개발',
+            '오토금융 자산 회수/매각관리 화면 및 서비스 개발',
+            '오토금융 여신 마감건 결재 관리 화면 및 서비스 개발',
+            '오토금융 원리금 수납원장 메일 발송 배치 서비스 개발',
+          ],
+          startedAt: '2025. 05.',
+          skills: [
+            {
+              keyword: 'Spring Boot',
+            },
+            {
+              keyword: 'iFramework',
+              description:
+                'IBK시스템의 기업용 애플리케이션 개발 프레임워크입니다.',
+            },
+            {
+              keyword: 'Oracle',
+            },
+          ],
+        },
         {
           title: '전세자금대출용 권리조사 업무시스템 개발',
           description: '',
           startedAt: '2024. 11.',
+          endedAt: '2025. 04.',
+          skills: [
+            {
+              keyword: 'Spring Boot',
+            },
+            {
+              keyword: 'Thymeleaf',
+            },
+            {
+              keyword: 'jQuery',
+            },
+          ],
         },
       ],
     },
