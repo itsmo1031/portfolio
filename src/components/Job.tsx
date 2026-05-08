@@ -25,9 +25,12 @@ const Job = ({ item }: JobProps) => {
           <span className="leading-tight tracking-tight">{item.position}</span>
         </div>
       </div>
-      <div className="col-span-2">
+      <div className="col-span-2 divide-y divide-[#EEEEEE]">
         {item.works.map((work: Work) => (
-          <div key={work.title} className="flex flex-col gap-5">
+          <div
+            key={work.title}
+            className="flex flex-col gap-5 py-5 first:pt-0 last:pb-0"
+          >
             <div>
               <h2 className="text-[2rem] leading-8 font-bold tracking-tighter sm:text-2xl sm:leading-6">
                 {work.title}
