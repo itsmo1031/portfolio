@@ -25,62 +25,76 @@ export default async function Image() {
     'Pretendard-Bold.woff',
   );
   const pretendard = await fs.readFile(fontPath);
+  const wavingHandPath = path.join(
+    process.cwd(),
+    'public',
+    'waving-hand-fixed.png',
+  );
+  const wavingHand = await fs.readFile(wavingHandPath);
+  const wavingHandDataUrl = `data:image/png;base64,${wavingHand.toString('base64')}`;
 
   return new ImageResponse(
-    (
-      // ImageResponse JSX element
+    // ImageResponse JSX element
+    <div
+      style={{
+        fontSize: 128,
+        background: 'white',
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        letterSpacing: '-0.025em',
+        justifyContent: 'flex-end',
+      }}
+    >
       <div
         style={{
-          fontSize: 128,
-          background: 'white',
+          position: 'absolute',
+          top: 0,
+          height: '10px',
           width: '100%',
-          height: '100%',
+          background: 'linear-gradient(to right, #0E5BE7, #EC4899)',
+        }}
+      />
+      <div
+        style={{
           display: 'flex',
           flexDirection: 'column',
-          letterSpacing: '-0.025em',
-          justifyContent: 'flex-end',
+          paddingLeft: '60px',
+          paddingBottom: '60px',
         }}
       >
         <div
           style={{
-            position: 'absolute',
-            top: 0,
-            height: '10px',
-            width: '100%',
-            background: 'linear-gradient(to right, #0E5BE7, #EC4899)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
           }}
-        />
+        >
+          안녕하세요!
+          <img src={wavingHandDataUrl} width={112} height={112} alt="" />
+        </div>
         <div
           style={{
             display: 'flex',
-            flexDirection: 'column',
-            paddingLeft: '60px',
-            paddingBottom: '60px',
           }}
         >
-          안녕하세요!👋
-          <div
+          저는
+          <span
             style={{
               display: 'flex',
+              paddingLeft: '20px',
+              background: 'linear-gradient(to right, #0E5BE7, #EC4899)',
+              backgroundClip: 'text',
+              color: 'transparent',
             }}
           >
-            저는
-            <span
-              style={{
-                display: 'flex',
-                paddingLeft: '20px',
-                background: 'linear-gradient(to right, #0E5BE7, #EC4899)',
-                backgroundClip: 'text',
-                color: 'transparent',
-              }}
-            >
-              {meta.name}
-            </span>
-            입니다.
-          </div>
+            {meta.name}
+          </span>
+          입니다.
         </div>
       </div>
-    ),
+    </div>,
     // ImageResponse options
     {
       // For convenience, we can re-use the exported opengraph-image
@@ -94,7 +108,6 @@ export default async function Image() {
           weight: 700,
         },
       ],
-      emoji: 'fluent',
     },
   );
 }

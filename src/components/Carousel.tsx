@@ -67,14 +67,29 @@ const Carousel = ({ images }: CarouselProps) => {
       {images &&
         images.map((image) => (
           <SwiperSlide key={image.alt}>
-            <figure className="relative h-[32rem] lg:h-[460px] sm:h-96">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                className="object-contain"
-                loading="lazy"
-                fill
-              />
+            <figure className="relative h-[32rem] sm:h-96 lg:h-[460px]">
+              {image.type === 'video' ? (
+                <video
+                  key={image.src}
+                  className="h-full w-full object-contain"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label={image.alt}
+                >
+                  <source src={image.src} type="video/mp4" />
+                </video>
+              ) : (
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  className="object-contain"
+                  loading="lazy"
+                  fill
+                />
+              )}
             </figure>
           </SwiperSlide>
         ))}

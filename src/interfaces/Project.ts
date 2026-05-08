@@ -30,4 +30,5 @@ export interface Links {
 export interface ProjectImage {
   src: string;
   alt: string;
+  type?: 'image' | 'video';
 }

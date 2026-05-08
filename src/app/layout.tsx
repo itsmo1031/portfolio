@@ -24,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="selection:bg-primary selection:text-white">
+      <body
+        suppressHydrationWarning
+        className="selection:bg-primary selection:text-white"
+      >
         {children}
       </body>
       <GoogleTagManager gtmId={meta.gtag} />
