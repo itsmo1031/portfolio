@@ -7,7 +7,7 @@ type SkillProps = {
 const Skill = ({ item }: SkillProps) => {
   return (
     <article className="flex flex-col gap-8 border-b border-[#EEEEEE] py-10 sm:gap-4">
-      <h2 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl">
+      <h2 className="text-[2rem] leading-8 font-bold tracking-tighter sm:text-2xl">
         {item.name}
       </h2>
       <ul className="list-inside list-disc leading-relaxed tracking-tight sm:leading-snug">

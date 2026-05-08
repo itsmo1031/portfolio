@@ -4,7 +4,7 @@ export interface Payload extends Common.Payload {
   list: Item[];
 }
 
-export type Social = "Email" | "Blog" | "LinkedIn" | "GitHub" | "Twitter";
+export type Social = 'Email' | 'Blog' | 'LinkedIn' | 'GitHub' | 'Twitter';
 
 export interface Item {
   name: Social;

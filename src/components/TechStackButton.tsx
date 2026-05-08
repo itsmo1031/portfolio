@@ -15,7 +15,7 @@ const TechStackButton = ({
   return (
     <button
       className={cn(
-        'border-primary before:bg-primary hover:before:bg-primary relative overflow-hidden rounded-full border px-3 py-1 transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:transition-all before:duration-300 hover:text-white hover:before:left-0 hover:before:w-full',
+        'border-primary before:bg-primary hover:before:bg-primary relative overflow-hidden rounded-full border px-3 py-1 transition-all before:absolute before:top-0 before:bottom-0 before:left-0 before:z-0 before:h-full before:w-0 before:transition-all before:duration-300 hover:text-white hover:before:left-0 hover:before:w-full',
         isSelected ? 'bg-primary text-white' : 'text-primary bg-white',
         className,
       )}

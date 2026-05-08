@@ -10,7 +10,7 @@ const Contact = ({ item }: ContactProps) => {
     <li className="mx-5 sm:mx-3">
       <a
         href={item.href}
-        className="flex items-center justify-center text-gray-500/70 transition-all duration-500 hover:-translate-y-1 hover:text-primary sm:text-primary"
+        className="hover:text-primary sm:text-primary flex items-center justify-center text-gray-500/70 transition-all duration-500 hover:-translate-y-1"
         aria-label={item.name}
         target="_blank"
         rel="noopener noreferrer"

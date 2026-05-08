@@ -3,4 +3,4 @@ export const getDateRangeToString = (startedAt: string, endedAt?: string) => {
     return startedAt;
   }
   return endedAt ? `${startedAt} - ${endedAt}` : `${startedAt} - 현재`;
-}
+};

@@ -13,13 +13,13 @@ const Project = ({ item }: ProjectProps) => {
     <section className="flex flex-col gap-10 border-b border-[#EEEEEE] py-14 lg:gap-4">
       <div className="flex flex-col gap-3 sm:gap-1">
         <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2 text-[2rem] font-bold leading-8">
+          <div className="flex items-center gap-2 text-[2rem] leading-8 font-bold">
             <h2 className="tracking-tighter">
               {item.links?.site ? (
                 <a
                   href={item.links.site}
                   target="_blank"
-                  className="text-primary underline underline-offset-4 transition-colors duration-500 hover:text-secondary-500"
+                  className="text-primary hover:text-secondary-500 underline underline-offset-4 transition-colors duration-500"
                   rel="noreferrer"
                 >
                   {item.name}
@@ -33,7 +33,7 @@ const Project = ({ item }: ProjectProps) => {
                 <a
                   href={item.links.git}
                   target="_blank"
-                  className="flex items-center text-3xl transition-colors duration-500 hover:text-primary"
+                  className="hover:text-primary flex items-center text-3xl transition-colors duration-500"
                   rel="noopener noreferrer"
                   aria-label="git repository link"
                 >
@@ -83,7 +83,7 @@ const Project = ({ item }: ProjectProps) => {
                     <a
                       href={article.href}
                       target="_blank"
-                      className="text-primary underline-offset-4 transition-colors duration-500 hover:text-secondary-500 hover:underline"
+                      className="text-primary hover:text-secondary-500 underline-offset-4 transition-colors duration-500 hover:underline"
                       rel="noopener noreferrer"
                     >
                       {article.title}

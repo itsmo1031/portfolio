@@ -8,6 +8,6 @@ export interface Item {
   name: string;
   startedAt: string;
   endedAt?: string;
-  title: string
+  title: string;
   description: string;
 }

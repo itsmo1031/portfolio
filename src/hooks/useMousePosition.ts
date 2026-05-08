@@ -7,7 +7,7 @@ const useMousePosition = () => {
 
   useEffect(() => {
     if (isListenerAdded.current) {
-      console.log("already added listener");
+      console.log('already added listener');
       return;
     }
 

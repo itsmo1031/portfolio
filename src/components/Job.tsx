@@ -13,7 +13,7 @@ const Job = ({ item }: JobProps) => {
     <section className="grid grid-cols-3 gap-2.5 border-b border-[#EEEEEE] py-14 sm:grid-cols-1 sm:gap-10">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col">
-          <h2 className="text-[2rem] font-bold leading-8 tracking-tighter">
+          <h2 className="text-[2rem] leading-8 font-bold tracking-tighter">
             {item.company}
           </h2>
           <span className="leading-tight tracking-tight">{item.location}</span>
@@ -29,7 +29,7 @@ const Job = ({ item }: JobProps) => {
         {item.works.map((work: Work) => (
           <div key={work.title} className="flex flex-col gap-5">
             <div>
-              <h2 className="text-[2rem] font-bold leading-8 tracking-tighter sm:text-2xl sm:leading-6">
+              <h2 className="text-[2rem] leading-8 font-bold tracking-tighter sm:text-2xl sm:leading-6">
                 {work.title}
               </h2>
               <span className="leading-tight tracking-tight">
