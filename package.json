@@ -8,37 +8,44 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-    "@next/third-parties": "^15.0.3",
+    "@next/third-parties": "16.2.6",
     "clsx": "^2.1.1",
-    "framer-motion": "^11.11.17",
-    "next": "^15.0.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-rough-notation": "^1.0.5",
-    "swiper": "^11.1.15",
-    "tailwind-merge": "^2.5.5",
-    "zustand": "^5.0.1"
+    "framer-motion": "12.38.0",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "react-rough-notation": "1.0.8",
+    "swiper": "12.1.4",
+    "tailwind-merge": "3.5.0",
+    "zustand": "5.0.13"
   },
   "devDependencies": {
-    "@egoist/tailwindcss-icons": "^1.8.1",
-    "@iconify-json/flowbite": "^1.2.2",
-    "@iconify-json/mdi": "^1.2.1",
-    "@iconify/json": "^2.2.276",
-    "@types/node": "^22.10.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "eslint": "^9.15.0",
-    "eslint-config-next": "15.0.3",
-    "eslint-config-prettier": "^9.1.0",
-    "postcss": "^8.4.49",
-    "prettier": "^3.4.1",
-    "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.15",
-    "typescript": "^5.7.2"
+    "@egoist/tailwindcss-icons": "1.9.2",
+    "@iconify-json/flowbite": "1.2.7",
+    "@iconify-json/mdi": "1.2.3",
+    "@iconify/json": "2.2.470",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "22.19.18",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.4",
+    "eslint-config-next": "16.2.6",
+    "eslint-config-prettier": "10.1.8",
+    "postcss": "8.5.14",
+    "prettier": "3.8.3",
+    "prettier-plugin-tailwindcss": "0.8.0",
+    "tailwindcss": "4.2.4",
+    "typescript": "5.9.3"
+  },
+  "overrides": {
+    "flatted": "3.4.2",
+    "picomatch": "2.3.2",
+    "postcss": "8.5.14",
+    "yaml": "2.8.3"
   }
 }

@@ -1,3 +1,5 @@
+@reference '../app/globals.css';
+
 .swiper-button-prev,
 .swiper-button-next {
   @apply text-primary/25 transition-colors duration-200 hover:text-primary;
