@@ -36,7 +36,7 @@
     "eslint": "9.39.4",
     "eslint-config-next": "16.2.6",
     "eslint-config-prettier": "10.1.8",
-    "postcss": "8.5.14",
+    "postcss": "8.5.23",
     "prettier": "3.8.3",
     "prettier-plugin-tailwindcss": "0.8.0",
     "tailwindcss": "4.2.4",
@@ -45,7 +45,7 @@
   "overrides": {
     "flatted": "3.4.2",
     "picomatch": "2.3.2",
-    "postcss": "8.5.14",
+    "postcss": "8.5.23",
     "yaml": "2.8.3"
   }
 }
